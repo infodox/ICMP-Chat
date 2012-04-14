@@ -79,7 +79,7 @@ class chat(object):
         self.parse_self_command(content[1:])
       else:
         for friend in self.friends:
-          self.send_message(friend, content)
+          self.send_command(friend, content)
       self.txt.set_text(self.txt.get_text()[0] + "\n<" + self.nick + "> " + content)
     self.inputbox.set_text("> ")
     self.loop.draw_screen()
